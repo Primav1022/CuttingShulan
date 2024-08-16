@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('../../../public/font/cdbf111f22ed6363b60634b5a85247b7.ttf') format('woff2'),
+  url('../../../public/font/cdbf111f22ed6363b60634b5a85247b7.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ShowClothes.css */
+.cloth-background {
+  width: 100%; /* ������Ҫ���� */
+  height: 500px; /* ������Ҫ���� */
+  background-image: url('../../../public/cloth.jpg'); /* ����Ϊ����·�����ͼ·�� */
+  background-size: cover;
+  position: relative;
+}
+
+.pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../public/cloth.jpg');
+  background-size: contain;
+}
+
+.middlecloth{
+    display: flex;
+  justify-content: center; /* ˮƽ���� */
+  align-items: center; /* ��ֱ���� */
+  height: 90%; /* �趨�߶�Ϊ100% */
+  box-sizing: border-box; /* ����padding��border���ڵĿ�߼��� */
+}
+.cloth-box {
+  background-color: #FFFFFF;
+    flex-grow: 1; /* ��ÿ�������������ÿռ� */
+    margin: 5px; /* ָ������֮��ļ�� */
+    border: 1px solid #CCCCCC; /* �߿���ɫ */
+    border-radius: 20px; /* Բ�� */
+    padding: 10px; /* �ڱ߾� */
+    box-sizing: border-box; /* ����padding��border���ڵĿ�߼��� */
+  }
+  .bottom-button {
+    font-family: Lexend, system-ui;
+    position: absolute; /* ���Զ�λ */
+    right: 30px; /* �����ұ߽�10px */
+    bottom: 16px; /* ����ײ��߽�10px */
+    background-color: #F00264; /* ������ɫ */
+    color: white; /* ������ɫ */
+    border-radius: 30px; /* Բ�ǻ��� */
+    border: none; /* �ޱ߿� */
+    padding: 10px 20px; /* �ڱ߾� */
+    cursor: pointer; /* �����ʽ */
+  }
+  
+  .bottom-button:hover {
+    background-color: #3c3f7a; /* �����ͣʱ�ı�����ɫ */
+  }
+  .cloth-box.selected {
+    border: 2px solid #F00264; /* ѡ��ʱ�ı߿���ɫ */
+  
+  }
+.scale-text-container {
+  display: flex;
+  justify-content: center; /* ˮƽ������������ */
+}
+.scale-text-container {
+    display: flex;
+    justify-content: center; /* ˮƽ������������ */
+  }
+  
+
+.scale-buttons-container {
+  display: flex; /* Aligns the buttons next to each other */
+  justify-content: center; /* Centers the buttons horizontally */
+  align-items: center; /* Centers the buttons vertically */
+  margin-top: 10px; /* Adds some space above the button container */
+}
+
+.scale-button {
+  background-color: #5C5C5C; /* Button background color */
+  color: white; /* Button text color */
+  border-radius: 50%; /* Makes the button round */
+  width: 30px; /* Width of the button */
+  height: 30px; /* Height of the button */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; /* Size of the '+' and '-' signs */
+  margin: 0 5px; /* Adds spacing on left and right of the button */
+}
+
+.scale-button:hover {
+  background-color: #4a4a4a; /* Darker shade on hover */
+}
+.clothbox{
+  width: 45%;
+  border-radius: 10px; /* Makes the button round */
+  border: #CCCCCC solid 2px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  margin: 20px;
+  background-color: #FFFFFF;
+  height: 90%;
+  display: flex;
+  justify-content: center; /* 垂直居中 */
+}
+.bottom-buttonbig {
+  background-color: #5C5C5C; /* ��ɫ��ɫ */
+  color: #FFFFFF;            /* ��ɫ�ı� */
+  font-weight: bold;         /* �Ӵ��ı� */
+  display: flex;             /* ʹ��flex���� */
+  justify-content: center;   /* ˮƽ���� */
+  align-items: center;       /* ��ֱ���� */
+  margin-right: 20px;        /* ���Ҽ��20px */
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+}
+.containerbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* ʹ�����ڵ�Ԫ����������������� */
+}
+
+.text-above-buttons {
+margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+  margin-bottom: 4px;
+}
+
+.bottom-buttonbig {
+  background-color: #5C5C5C; /* ��ɫ��ɫ */
+  color: #FFFFFF;            /* ��ɫ�ı� */
+  font-weight: bold;         /* �Ӵ��ı� */
+  display: flex;             /* ʹ��flex���� */
+  justify-content: center;   /* ˮƽ���� */
+  align-items: center;       /* ��ֱ���� */
+  width: 25px;
+  height: 25px;
+  font-size: 15px;
+  border: none;
+  border-radius: 50%;
+
+}
+.zoomimg{
+  margin-right: 50px;
+}
+.cloth-canvas2, .pattern-canvas {
+position: relative;
+width: 75%;
+
+  display: flex;
+  flex-direction: column;
+}
+.cloth-canvas{
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pattern-canvas {
+  z-index: 1; /* ȷ�����ƻ���λ���·�����֮�� */
+}
+.debug-area {
+  margin-top: 20px;
+  border: 1px solid #ccc; /* Ϊ����������ӱ߿򣬱��ڹ۲� */
+}
+
+.debug-pattern-image {
+  max-width: 100%; /* ����ͼ������Ӧ���� */
+  height: auto; /* ����ͼ����� */
+  display: block; /* ��ֹͼƬ�·����ֿ�϶ */
+}
+.sizetext{
+  margin-right: 10px;
+}
+.clothbox.selected {
+  border: 3px solid #F00264;
+}
+
+.bottomafter{
+  height: 13.4vh;
+  background-color: rgb(255, 255, 255);
+
+  width: calc(100% - 10px); /* ��ȥ���˵Ŀհ� */
+  margin: 0 auto; /* ʹ�ױ߿���� */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomlast{
+  height: 12vh;
+}
+.canvas-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+

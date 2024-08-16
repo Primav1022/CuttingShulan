@@ -1,0 +1,13 @@
+.cloth-box {
+    /* Your styles for the box */
+    border: 2px solid #CCCCCC; /* Non-selected border color */
+    border-radius: 20px; /* Rounded corners as specified */
+    flex-grow: 1; /* Make boxes grow to fill the container */
+    margin: 10px; /* Keep some space from the container edges */
+    /* Other styles */
+  }
+  
+  .cloth-box.selected {
+    border-color: #F00264; /* Selected border color */
+  }
+  

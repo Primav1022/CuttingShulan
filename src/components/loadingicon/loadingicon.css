@@ -1,0 +1,142 @@
+@keyframes slow-rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fast-rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(180deg); }
+}
+@keyframes pulse-squeeze {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1, 0.75); /* 在50%的时候，Y轴压缩到0.75倍 */
+    }
+}
+/* 呼吸效果动画 */
+@keyframes breathe {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1); /* 开始和结束时不缩放 */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1,1.5); /* 中间稍微放大一点 */
+    }
+}
+.loading-container {
+    display: flex;
+    flex-direction: column;  /* 垂直堆叠子元素 */
+    align-items: center;     /* 水平居中子元素 */
+    justify-content: center; /* 垂直居中子元素 */
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 10px auto 0;
+}
+.loader-icon.phase-1-2s {
+    animation: slow-rotation 2s linear infinite;
+
+}
+.loader-icon.phase-3s {
+    animation: fast-rotation 1s linear infinite;
+}
+.loader-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    background: url('loading.svg') no-repeat center center;
+    background-size: 100% 100%;
+    animation: slow-rotation 2s linear infinite;
+    transform-origin: center center;
+}
+
+
+.eye-icon {
+
+    transform: translate(-50%, -50%) scale(1);
+    transform-origin: center center;
+    width: 68px;
+    height: 23px;
+    animation: pulse 3s infinite ease-in-out; /* 应用动画，持续时间3秒，无限循环 */
+}
+.eye-icon.phase-1-2s {
+    /* 第一阶段没有动画 */
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: breathe 2s infinite ease-in-out; /* 应用呼吸动画 */
+
+
+}
+.icon-3s {
+    animation: fast-rotation 1s linear infinite;
+}
+.eye-icon.phase-3s {
+    /* 第三阶段动画 */
+    /*animation: pulse 1s infinite ease-in-out;*/
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: breathe 2s infinite ease-in-out; /* 应用呼吸动画 */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1); /* 保持原始居中和缩放 */
+    }
+    50% {
+        transform: translate(-50%, -50%) scaleY(1); /* 在缩放时仍然居中 */
+    }
+}
+.first{
+    position: relative; top: 10px; display: block;
+}
+.backboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px; /* 固定宽度 */
+    height: 180px; /* 高度自动调整 */
+    z-index: 1000;
+    background-image: url('../../../public/icon/Rectangle 2012.svg');
+    background-size: cover; /* 背景图片填充整个容器 */
+    background-position: center; /* 图片居中 */
+    position: absolute;
+}
+
+.backboard::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* 边框宽度的负值 */
+    right: -3px;
+    bottom: -3px;
+    left: -3px;
+    z-index: -1;
+    border-radius: inherit; /* 继承父元素的圆角值 */
+
+    /*border-image: linear-gradient(to bottom, #F4E6EC, #D1D2E5) 1;*/
+
+    pointer-events: none; /* 防止伪元素干扰鼠标事件 */
+}
+.icontext{
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+
+.loading-animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255,0.8); /* 可选：添加半透明背景 */
+    z-index: 1000; /* 确保它在顶层 */
+    border-radius: 20px;
+}

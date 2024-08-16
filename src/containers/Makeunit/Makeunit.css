@@ -1,0 +1,23 @@
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 使容器的高度等于视口的高度 */
+  }
+.bgcolor{
+    margin-left: 30px;
+    margin-right: 2vw;
+    background-image:url('../../../public/icon/bg.svg') ;
+    width: calc(100% - 50px );
+    height: 100%;
+    position: relative;
+    display: flex;       /* ??? Flexbox ???? */
+    justify-content: center; /* ?????? */
+    align-items: center;     /* ??????? */
+
+;
+}
+
+.unitbottom{
+    height: 10vh;
+}

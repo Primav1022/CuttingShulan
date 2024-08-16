@@ -1,0 +1,180 @@
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow-y: auto;
+gap: 1vh;
+  max-width: 32vw;
+  max-height: 32vw;
+
+}
+
+.image-wrapper {
+  width: 15vw;
+background-color: white;
+  gap: 10px;
+  position: relative;
+  border: 2px solid black; /* ??????? */
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5); /* ?????? */
+}
+
+.gallery-image {
+  width: 100%;
+  /*height: 160px;*/
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image-wrapper.selected {
+  border: 2px solid #F00264; /* ????????????? */
+}
+
+.buttons {
+  display: flex; /* ??????????? */
+  position: absolute;
+  top: 50%;
+  flex-direction: column; /* ???????????? */
+
+  transform: translateY(-50%);
+  z-index: 10;
+
+}
+
+
+.image-wrapper.selected .buttons {
+  display: flex;
+}
+
+.image-wrapper:nth-child(4n+1) .buttons, .image-wrapper:nth-child(4n+2) .buttons {
+ left: -20px;
+}
+
+.image-wrapper:nth-child(4n+3) .buttons, .image-wrapper:nth-child(4n+4) .buttons {
+  right: -45px;
+}
+
+.image-button {
+
+
+  background-color: transparent; /* 设置背景透明 */
+  border: none; /* 移除边框 */
+  padding: 0; /* 移除内边距 */
+  cursor: pointer;
+  overflow: hidden; /* 防止内容溢出 */
+}
+
+
+/* ????????????? */
+.image-gallery::-webkit-scrollbar {
+  width: 5px;
+  transition: background-color 0.8s ease;
+}
+
+.image-gallery::-webkit-scrollbar-track {
+  background: transparent;
+  transition: background-color 0.8s ease;
+}
+
+.image-gallery::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 2px;
+  margin-left: -2px;
+}
+.image-button svg{
+  margin-right:3px ;
+}
+.image-button svg:active{
+  fill: white;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.zoomed-image-container {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+
+  z-index: 11; /* ??????????? */
+  /* ????????????????????????? */
+  max-width: 65vw;
+  max-height: 65vw;
+  border: 1px solid black; /* ?????????? */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* ?????? */
+
+}
+
+
+.zoomed-image {
+  width: 35vw; /* ?????????? */
+  height: auto; /* ?????????? */
+}
+/* ????????????? */
+.zoomed-image-container::-webkit-scrollbar {
+  width: 5px;
+  transition: background-color 0.8s ease;
+}
+.close-button {
+  position: absolute;
+  top: -10px; /* ????????????????????? */
+  right: -10px; /* ???????????????? */
+  background: #F780B1; /* ????????? */
+  color: white; /* ??? "x" ????????? */
+  border: none;
+  border-radius: 50%; /* ?????? */
+  width: 20px; /* ??????????????????? */
+  height: 20px; /* ??????????????????? */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100; /* ???????????????????? */
+  box-sizing: border-box;
+  overflow: visible; /* ?????????????????? */
+}
+/* ShowImg.css */
+.image-gallery-container {
+  position: relative; /* 使其子元素的绝对定位基于此容器 */
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /*background-color: #FFFFFF;*/
+}
+
+.regenerate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 85%;
+  left: calc(50% - 16vw - 110px);
+
+  background-color: transparent; /* 设置背景透明 */
+  border: none; /* 移除边框 */
+  padding: 0; /* 移除内边距 */
+  cursor: pointer;
+  overflow: hidden; /* 防止内容溢出 */
+}
+
+.regenerate-button img {
+  max-width: 100%; /* 限制图片最大宽度为按钮宽度 */
+  max-height: 100%; /* 限制图片最大高度为按钮高度 */
+  display: block; /* 避免默认的行内元素间距 */
+right: 10px;
+}
+
+

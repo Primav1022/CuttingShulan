@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('../../../public/font/cdbf111f22ed6363b60634b5a85247b7.ttf') format('woff2'),
+  url('../../../public/font/cdbf111f22ed6363b60634b5a85247b7.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.title-bar {
+    height: 40px;
+    width: calc(100% - 5px);
+    background-color:white;
+font-family:Lexend ;
+
+  border: #000000 solid 2px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .title-bar span {
+    font-size: medium;
+  }
+  
+  .top {
+    display: flex;
+    height: 12.5vh;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    /*border-bottom: 2px solid #999999;*/
+    width: calc(100% - 20px); /* ��ȥ���˵Ŀհ� */
+    align-items: center; /* ��ֱ���� */
+    /*justify-content: space-between; !* ����ƽ�ֿռ� *!*/
+    margin-left: 20px;
+  }
+  .logo {
+
+  margin-left: 10px;
+  }
+  
+  .steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8vw;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+.circle {
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid #333333;
+  font-family:Lexend ;
+  position: relative;
+}
+  
+  .step-name {
+    margin-top: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    /*font-family:FZLanTingHei ;*/
+    font-weight: lighter;
+  }
+  
+  .active .circle {
+    background-color: #F00264;
+    color: white;
+    border: none         ;
+  }
+  
+  .step:not(:last-child) {
+    margin-right: 2vw;
+  }
+
+/* ֻ�Է����һ��Ԫ�����ɺ��� */
+.circle:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100%; /* ��Բ������Ҳ࿪ʼ */
+  right: calc(-100% - 90px); /* ����һ��Բ��Ŀ�ʼ����ȥ��� */
+  height: 1px;
+  background-color: #333333;
+  margin-left: 2px; /* ��Բ�㱣��2px���� */
+  margin-right: 2px;
+  border-radius: 500px; /* ʹ�ú������˱�Բ */
+}
+.step:last-child {
+  margin-right: 0; /* ���һ������û���ұ߾� */
+}
+.step:last-child .circle::after {
+  content: none;
+}
+.navigation-buttons {
+  display: flex;
+  gap: 5px; /* 按钮之间的间距 */
+  position: absolute;
+  right: 2vw; /* 距离右边界 2vw */
+}
+
+
+  
+  .prev-step,
+  .next-step {
+border: none;
+  background-color: #FFFFFF;
+  }
+  .prev-step:last-child, .next-step:last-child {
+    margin-right: 0;
+}
+
+  /* �����Ҫ����ť�Ĳ��ɵ��״̬���������������ʽ */
+  .prev-step:disabled,
+  .next-step:disabled {
+    background-color: #ffccd5; /* ���ɵ��״̬�ı�����ɫ */
+    cursor: default;
+  }

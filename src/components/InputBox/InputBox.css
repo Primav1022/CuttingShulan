@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Lexend';
+  src: url('../../../public/font/cdbf111f22ed6363b60634b5a85247b7.ttf') format('woff2'),
+  url('../../../public/font/cdbf111f22ed6363b60634b5a85247b7.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.input-container {
+    position: relative; /* 为上传按钮定位提供基准 */
+  }
+  
+  .input-box {
+    border: 1.3px solid #333333;
+    border-radius: 10px;
+    width: 600px;
+    height: 25px;
+    padding: 5px 45px 5px 15px; /* 确保内部文本与输入框边界和上传按钮有足够的间距 */
+    outline: none; /* 移除聚焦时的默认轮廓 */
+  }
+  
+  .upload-btn {
+    font-family: Lexend, ui-serif;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 8px; /* 与输入框右侧间距 */
+    top: 50%;
+    border-radius: 5px;
+    transform: translateY(-50%); /* 垂直居中 */
+    background-color: #999999;
+    border: none; /* 移除默认边框 */
+    color: white; /* 设置图标或文字颜色 */
+    cursor: pointer; /* 鼠标悬停时显示手形图标 */
+  }
+  .upload-btn:active {
+    background-color: #F00264; /* 点击时背景色变为粉色 */
+  }

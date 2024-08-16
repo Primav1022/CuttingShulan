@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* 确保<body>元素占满整个视口宽度 */
+  background-color:#ffccd5;
+  height: 100%;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right-side {
+    width: 100%;
+    height: 300px;
+  }
+}
+@font-face {
+  font-family: 'FZLanTingHei';
+  src: url('../public/font/FZLTHProGBK_SB.TTF') format('truetype');
+  font-weight:normal;
+  font-style: normal;
+}
+
+
+
+body {
+  font-family: 'FZLanTingHei', Arial, sans-serif; /* 作为备用，还包括了 Arial 和 sans-serif */
+}
+/* 覆盖 Moveable 组件的边框颜色 */
+.moveable-control-box {
+  border-color: #F00264 !important; /* 使用 !important 确保覆盖默认样式 */
+}
+
+/* 如果有需要，也可以覆盖其他相关元素的样式，比如控制点 */
+.moveable-line, .moveable-control {
+  background-color: #F00264 !important;
+}
+
+
+

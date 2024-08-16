@@ -1,0 +1,65 @@
+.sketch-box {
+  position: relative;
+  width: 60vh; /* Set both width and height to 60vh to make it a square */
+  height: 60vh;
+  border: 4px dashed #333333; /* Change border style to dashed and set color to #333333 */
+background-color: #FFFFFF;
+
+}
+
+.image-box {
+  position: absolute;
+  border: 1px solid transparent;
+}
+
+.image-box.selected {
+  border: 2px solid pink;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.resize-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  right: 0;
+  background: red;
+  cursor: se-resize;
+}
+.selected {
+  border: 2px solid pink;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.image-container {
+  position: relative;
+  overflow: auto;
+  height: 85vh;
+}
+
+.image-container::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.image-container::-webkit-scrollbar-track,
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.image-container::-webkit-scrollbar-thumb,
+.container::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 2px;
+  transition: background-color 0.8s ease;
+}

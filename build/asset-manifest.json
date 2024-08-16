@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.957baad3.css",
+    "main.js": "/static/js/main.b8f79d42.js",
+    "static/media/FZLTHProGBK_SB.TTF": "/static/media/FZLTHProGBK_SB.e32337753ed91a59903e.TTF",
+    "static/media/dress.png": "/static/media/dress.828e577b2c1636d475bc.png",
+    "static/media/Remove-bg.ai_1713274468747(1).png": "/static/media/Remove-bg.ai_1713274468747(1).0541f4e5f3246b1c414b.png",
+    "static/media/cloth.jpg": "/static/media/cloth.9a685652e6ff9b38e63d.jpg",
+    "static/media/ttf": "/static/media/cdbf111f22ed6363b60634b5a85247b7.45916bdd5ad858b1e745.ttf",
+    "static/media/bg.svg": "/static/media/bg.e48b3806a35a21eebdb3.svg",
+    "static/media/loading.svg": "/static/media/loading.99e3948b68b9b68d96b4.svg",
+    "static/media/Rectangle 2012.svg": "/static/media/Rectangle 2012.7fe275edffd46f6ef991.svg",
+    "index.html": "/index.html",
+    "main.957baad3.css.map": "/static/css/main.957baad3.css.map",
+    "main.b8f79d42.js.map": "/static/js/main.b8f79d42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.957baad3.css",
+    "static/js/main.b8f79d42.js"
+  ]
+}
